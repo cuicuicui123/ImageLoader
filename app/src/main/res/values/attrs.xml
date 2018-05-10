@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomRatingBar">
+        <attr name="star_num" format="integer"/>
+        <attr name="star_drawable" format="reference"/>
+        <attr name="star_width" format="dimension"/>
+        <attr name="star_margin" format="dimension"/>
+    </declare-styleable>
+</resources>
