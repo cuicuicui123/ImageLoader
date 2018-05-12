@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        FiveStarView fiveStarView = findViewById(R.id.five_star_view);
+//        fiveStarView.setRating(2.1f);
     }
 }

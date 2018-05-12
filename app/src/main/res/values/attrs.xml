@@ -6,4 +6,9 @@
         <attr name="star_width" format="dimension"/>
         <attr name="star_margin" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="FiveStarView">
+        <attr name="five_star_drawable" format="reference"/>
+        <attr name="five_star_size" format="dimension"/>
+        <attr name="fice_star_margin" format="dimension"/>
+    </declare-styleable>
 </resources>

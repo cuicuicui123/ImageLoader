@@ -2,7 +2,6 @@ package com.example.cuiweicong.myapplication;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.support.annotation.Nullable;
@@ -46,10 +45,12 @@ public class CustomRatingBar extends LinearLayout {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int widthSpecMode = MeasureSpec.AT_MOST;
-        int widthSize = starWidth * starNum + starMargin * 6;
-        widthMeasureSpec = MeasureSpec.makeMeasureSpec(widthSize, widthSpecMode);
-        heightMeasureSpec = MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(heightMeasureSpec), MeasureSpec.AT_MOST);
+
+        int widthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
+        if (widthSpecMode == MeasureSpec.AT_MOST) {
+            int widthSize = starWidth * starNum + starMargin * 6;
+            widthMeasureSpec = MeasureSpec.makeMeasureSpec(widthSize, widthSpecMode);
+        }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
